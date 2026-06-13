@@ -1,7 +1,7 @@
 import type {Config} from '@react-router/dev/config'
 
 export default {
-  appDirectory: 'client',
+  appDirectory: 'frontend/web',
   future: {
     v8_middleware: true,
     v8_splitRouteModules: true,

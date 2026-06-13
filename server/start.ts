@@ -1,9 +1,9 @@
 import getPort, {portNumbers} from 'get-port'
 
-import {reactRouterFastify} from '@mcansh/remix-fastify/react-router'
 import {fastify} from 'fastify'
-import {usersRouter} from './api/users'
 import {log} from './util/log'
+import {reactRouterFastify} from '@mcansh/remix-fastify/react-router'
+import {usersRouter} from './api/users'
 
 const {
   LOG_LEVEL: logLevel,

@@ -42,9 +42,9 @@ type RouteFiles = {
 };
 
 type RouteModules = {
-  "root": typeof import("./client/root.tsx");
-  "home": typeof import("./client/./layouts/Default.tsx");
-  "routes/home": typeof import("./client/./routes/home.tsx");
-  "layouts/Default": typeof import("./client/./layouts/Default.tsx");
-  "routes/users": typeof import("./client/./routes/users.tsx");
+  "root": typeof import("./frontend/web/root.tsx");
+  "home": typeof import("./frontend/web/./layouts/Default.tsx");
+  "routes/home": typeof import("./frontend/web/./routes/home.tsx");
+  "layouts/Default": typeof import("./frontend/web/./layouts/Default.tsx");
+  "routes/users": typeof import("./frontend/web/./routes/users.tsx");
 };
