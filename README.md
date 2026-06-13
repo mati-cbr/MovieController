@@ -20,6 +20,10 @@ Główne funkcjonalności (są jeszcze w TODO):
 Z bardziej technicznych rzeczy ten projekt korzysta z [React Router 7](https://reactrouter.com/home) oraz [Fastify](https://fastify.dev/).
 Jest on też forkiem innego, ogólnodostępnego projektu na github (pytania szczegółowe proszę kierować do autora).
 
+## Wymagania
+
+- node >= 22.x.x
+
 ## TODO (najważniejsze)
 
 - Zamockować sobie backend na json-ach
