@@ -16,7 +16,11 @@ export const UserList = () => {
       {data.map((item) => {
         return (
           <li key={item.id.format?.toString()}>
-            <User role={item.role} firstName={item.firstName} lastName={item.lastName}/>
+            <User
+              role={item.role}
+              firstName={item.firstName}
+              lastName={item.lastName}
+            />
           </li>
         )
       })}

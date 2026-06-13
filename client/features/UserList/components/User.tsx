@@ -1,7 +1,7 @@
 import type {User as UserProps} from '@shared/types/user'
 
 type Props = {
-  firstName: UserProps['firstName'],
+  firstName: UserProps['firstName']
   lastName: UserProps['lastName']
   role: UserProps['role']
 }

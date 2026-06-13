@@ -9,9 +9,13 @@ import {uuidv4} from 'zod/v4'
 
 export const usersRouter = async (fastify: FastifyInstance) => {
   fastify.get('/users', async (request, reply) => {
-    console.log('Information about request: ', request)
     const users: User[] = [
-      {id: uuidv4(), firstName: 'Mariusz', lastName: 'Alkoholik', role: 'host'},
+      {
+        id: uuidv4(),
+        firstName: 'Mariusz',
+        lastName: 'Alkoholik',
+        role: 'host',
+      },
       {
         id: uuidv4(),
         firstName: 'Cyprian',

@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@simonsmith/react-router-fastify",
+      "name": "moviecontroller",
       "dependencies": {
         "@mcansh/remix-fastify": "^4.0.8",
         "@react-router/node": "^7.3.0",

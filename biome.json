@@ -1,0 +1,28 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": {
+    "ignore": [".vim"]
+  },
+  "formatter": {
+    "useEditorconfig": false,
+    "indentStyle": "space",
+    "bracketSpacing": false
+  },
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "rules": {
+      "style": { "noNamespace": "off" },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "bracketSpacing": false
+    }
+  }
+}
