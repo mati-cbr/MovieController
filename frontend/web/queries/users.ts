@@ -1,19 +1,44 @@
 import {dehydrate, queryOptions, useQuery} from '@tanstack/react-query'
 
-import {apiRequest} from '@common/util/api-request'
-import {createQueryClientForServer} from '@common/util/query-client'
-import type {User} from '@shared/types/user'
 import type {QueryClient as QueryClientType} from '@tanstack/react-query'
+import type {User} from '@shared/types/user'
+// import {apiRequest} from '@common/util/api-request'
+import {createQueryClientForServer} from '@common/util/query-client'
+import { uuidv4 } from 'zod/v4'
+
+// Jeżeli server będzie już gdzieś zahostowany i będzie działał poprawnie - to trzeba będzie usunąć te mocki.
+const users: User[] = [
+  {
+    id: uuidv4(),
+    firstName: 'Mariusz',
+    lastName: 'Alkoholik',
+    role: 'host',
+  },
+  {
+    id: uuidv4(),
+    firstName: 'Cyprian',
+    lastName: 'Nietrzeźwiejący',
+    role: 'guest',
+  },
+  {
+    id: uuidv4(),
+    firstName: 'Mścichuj',
+    lastName: 'Białogłowy',
+    role: 'guest',
+  },
+]
 
 export const getUserQueryOptions = () => {
   return queryOptions<User[]>({
     queryKey: ['users-list'],
-    queryFn: () => apiRequest('/users'),
+    // Jeżeli będzie gotowy backend to zmienić to na `queryFn: () => apiRequest('/users'),`
+    queryFn: () => { return users },
   })
 }
 
 export const fetchUserData = async () => {
   const queryClient = createQueryClientForServer()
+
   const data = await queryClient.ensureQueryData(getUserQueryOptions())
   return {data, queryClient}
 }

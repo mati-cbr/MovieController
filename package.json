@@ -20,6 +20,7 @@
     "format": "biome format --write .",
     "dev": "nodemon",
     "start": "NODE_ENV=production node --env-file=.env --env-file-if-exists=.env.production ./build/fastify/server",
+    "start:react-router": "react-router dev",
     "tsc": "tsc",
     "typegen": "react-router typegen"
   },
@@ -30,6 +31,7 @@
     "@tanstack/react-query": "^5.67.3",
     "clsx": "^2.1.1",
     "fastify": "^5.2.1",
+    "fastify-cli": "^8.0.0",
     "get-port": "^7.1.0",
     "isbot": "^5.1.23",
     "pino-http": "^10.4.0",

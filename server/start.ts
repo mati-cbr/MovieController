@@ -2,7 +2,6 @@ import getPort, {portNumbers} from 'get-port'
 
 import {fastify} from 'fastify'
 import {log} from './util/log'
-import {reactRouterFastify} from '@mcansh/remix-fastify/react-router'
 import {usersRouter} from './api/users'
 
 const {
@@ -17,7 +16,15 @@ const app = fastify({
   disableRequestLogging: nodeEnv === 'development',
 })
 
-app.register(reactRouterFastify)
+/*
+  Ze względów bezpieczeństwa rejestrowanie `reactRouterFastify` zostało zakomentowane.
+  Wyświetla on gotowe template'y reactowe do wyrenderowania po stronie przeglądarki.
+  Jeżeli aplikacja będzie kiedyś przeze mnie zahostowana osobno niż tylko jako wtyczka przeglądarkowa to pewnie tego użyje.
+  Póki co używam standardowej (json-owej) komunikacji między clientem a serverem.
+
+  Przed użyciem należy najpierw zaimportować: `import {reactRouterFastify} from '@mcansh/remix-fastify/react-router'`
+*/
+// app.register(reactRouterFastify)
 app.register(usersRouter, {prefix: '/api'})
 
 const startServer = async () => {

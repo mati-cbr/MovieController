@@ -5,16 +5,18 @@ export const apiRequest = async <ApiResponse>(
   path: `/${string}`,
   fetchOptions?: RequestInit,
 ) => {
-  const base = getApiUrl()
+  // Odkomentować, gdy backend będzie w pełni gotowy
+  // const base = getApiUrl()
 
-  const url = `${base}${path}`
-  const response = await fetch(url, fetchOptions)
-  const json = (await response.json()) as ApiResponse
+  // const url = `${base}${path}`
+  // const response = await fetch(url, fetchOptions)
+  // const json = (await response.json()) as ApiResponse
 
-  const log = serverOnly$((await import('@server/util/log')).log)
-  if (log) {
-    log.debug(json, `request to ${url}`)
-  }
+  // const log = serverOnly$((await import('@server/util/log')).log)
+  // if (log) {
+  //   log.debug(json, `request to ${url}`)
+  // }
 
-  return json
+  // Powinno być `return json` ale jeszcze backend nie jest gotowy
+  return [{}]
 }

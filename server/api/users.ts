@@ -29,6 +29,6 @@ export const usersRouter = async (fastify: FastifyInstance) => {
         role: 'guest',
       },
     ]
-    reply.status(200).send(users)
+    reply.send(users)
   })
 }

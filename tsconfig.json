@@ -4,8 +4,8 @@
     "**/*.tsx",
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx",
+    "**/.frontend/**/*.ts",
+    "**/.frontend/**/*.tsx",
     ".react-router/types/**/*"
   ],
   "compilerOptions": {
